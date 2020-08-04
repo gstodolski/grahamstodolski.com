@@ -59,15 +59,9 @@ header {
   padding: 25px;
 }
 
-.navbar {
-  max-width: 960px;
-  width: 90%;
-  margin: 0 auto;
-}
-
 nav {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,22 +69,26 @@ nav {
 }
 
 .headshot {
-  width: 17%;
-  height: 17%;
+  width: 10%;
+  height: auto;
   margin-right: 15px;
   margin-bottom: 0 auto;
-  position: relative;
   transform: translateX(-100rem);
   animation: slideIn .7s forwards;
   animation-delay: 1.1s;
 }
 
-.logo {
+.logo-text {
   font-size: 2.1vw;
   font-weight: 300;
-  position: relative;
   transform: translateX(-100rem);
   animation: slideIn .5s forwards;
+}
+
+.logo {
+  flex: 3;
+  padding: 20px 20px 0px;
+  position: relative;
 }
 
 h1 a {
@@ -100,20 +98,28 @@ h1 a {
 
 nav ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav li {
+  vertical-align: middle!important;
+}
+
+.item {
    list-style: none;
    transform: translateX(100rem);
    animation: slideIn .5s forwards;
+   vertical-align: middle!important;
 }
 
-nav ul li a {
+.item-link {
    padding: 1rem 0;
    margin: 0 2.25rem;
    position: relative;
    text-decoration: none!important;
    color: #696969!important;
+   flex: 1;
 }
 
 nav ul li:nth-child(1) {
@@ -141,11 +147,11 @@ nav ul li:nth-child(6) {
 }
 
 nav ul li a:last-child {
-  margin-right: 0;
+  margin-right: 10px;
 }
 
-nav ul li a::before,
-nav ul li a::after {
+.item-link::before,
+.item-link::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -156,18 +162,18 @@ nav ul li a::after {
   transition: all .5s;
 }
 
-nav ul li a::before {
+.item-link::before {
   top: 0;
   transform-origin: left;
 }
 
-nav ul li a::after {
+.item-link::after {
   bottom: 0;
   transform-origin: right;
 }
 
-nav ul li a:hover::before,
-nav ul li a:hover::after {
+.item-link:hover::before,
+.item-link:hover::after {
   transform: scaleX(1);
 }
 
