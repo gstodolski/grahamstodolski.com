@@ -49,11 +49,14 @@ header {
 }
 
 .navbar-brand {
+  float: right;
   padding-left: 1rem;
   font-size: 1.75rem;
 }
 .navbar-nav {
-  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
   right: 1rem;
   font-size: 1.25rem;
 }
@@ -99,6 +102,10 @@ h3 a {
   font-size: 15px;
 }
 
+.gray-right-border {
+  border-right: 1px solid #ccc;
+}
+
 /* Underline Reveal */
 .hvr-underline-reveal {
   display: inline-block;
@@ -131,7 +138,6 @@ h3 a {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
-
 
 .icon {
   font-size: 5vw;
@@ -166,8 +172,9 @@ h3 a {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .headshot {display: none;}
+@media screen and (max-width: 992px) {
+  section {padding: 75px 3rem;}
+  .gray-right-border {border-right: 0; border-bottom: 1px solid #ccc; margin-bottom: 15px;}
 }
 
 .typewriter h3 {
