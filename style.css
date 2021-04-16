@@ -5,12 +5,13 @@
 }
 
 html {
-  background-color: white;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
+  background-color: #FAFAFA;
 }
 
 #content {
@@ -24,23 +25,10 @@ p {
   margin: 30px;
 }
 
-h2 {
-  margin: 20px;
-}
-
 section {
-  padding: 75px 0;
+  padding: 75px 15rem;
   font-family: Avenir, sans-serif;
   background-color: white;
-}
-
-.intro {
-  color: black;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-size: 65px;
-  z-index: 1;
-  position: relative;
 }
 
 header {
@@ -49,6 +37,7 @@ header {
   top: 0;
   background-color: #eee;
   z-index:2;
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 .container {
@@ -59,128 +48,40 @@ header {
   padding: 25px;
 }
 
-nav {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5vw;
+.navbar-brand {
+  padding-left: 1rem;
+  font-size: 1.75rem;
 }
-
-.headshot {
-  width: 10%;
-  height: auto;
-  margin-right: 15px;
-  margin-bottom: 0 auto;
-  transform: translateX(-100rem);
-  animation: slideIn .7s forwards;
-  animation-delay: 1.1s;
-}
-
-.logo-text {
-  font-size: 2.1vw;
-  font-weight: 300;
-  transform: translateX(-100rem);
-  animation: slideIn .5s forwards;
-}
-
-.logo {
-  list-style: none;
-  flex: 3;
-  padding: 20px 20px 0px;
-  position: relative;
-}
-
-h1 a {
-  text-decoration: none!important;
-  color: #696969!important;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav li {
-  vertical-align: middle!important;
-}
-
-.item {
-   list-style: none;
-   transform: translateX(100rem);
-   animation: slideIn .5s forwards;
-   vertical-align: middle!important;
-}
-
-.item-link {
-   padding: 1rem 0;
-   margin: 0 2.25rem;
-   position: relative;
-   text-decoration: none!important;
-   color: #696969!important;
-   flex: 1;
-}
-
-nav ul li:nth-child(1) {
-  animation-delay: 0s;
-}
-
-nav ul li:nth-child(2) {
-  animation-delay: .2s;
-}
-
-nav ul li:nth-child(3) {
-  animation-delay: .4s;
-}
-
-nav ul li:nth-child(4) {
-  animation-delay: .6s;
-}
-
-nav ul li:nth-child(5) {
-  animation-delay: .8s;
-}
-
-nav ul li:nth-child(6) {
-  animation-delay: 1s;
-}
-
-nav ul li a:last-child {
-  margin-right: 10px;
-}
-
-.item-link::before,
-.item-link::after {
-  content: '';
+.navbar-nav {
   position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #1E90FF;
-  left: 0;
-  transform: scaleX(0);
-  transition: all .5s;
-}
-
-.item-link::before {
-  top: 0;
-  transform-origin: left;
-}
-
-.item-link::after {
-  bottom: 0;
-  transform-origin: right;
-}
-
-.item-link:hover::before,
-.item-link:hover::after {
-  transform: scaleX(1);
+  right: 1rem;
+  font-size: 1.25rem;
 }
 
 .parallax {
   padding: 300px 35px;
   background: transparent;
+}
+
+.intro {
+  color: black;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 65px;
+  font-weight: 550;
+  letter-spacing: 2px;
+  text-shadow: 0 0 1px transparent;
+  z-index: 1;
+  position: relative;
+}
+
+h2 {
+  margin: 20px;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h3 a {
+  text-decoration: none!important;
 }
 
 .info {
@@ -198,26 +99,39 @@ nav ul li a:last-child {
   font-size: 15px;
 }
 
-.card-deck {
-  margin: 30px;
-  font-family: 'Nunito Sans', sans-serif;
+/* Underline Reveal */
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1E90FF;
+  height: 3px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
-.iframe-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  margin: 0 auto;
-}
-.iframe-container iframe {
-  position: absolute;
-  margin: 0 auto;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
 .icon {
   font-size: 5vw;
@@ -232,6 +146,11 @@ nav ul li a:last-child {
   -moz-animation: fa-spin .45s 1 linear;
   -o-animation: fa-spin .45s 1 linear;
   animation: fa-spin .45s 1 linear;
+}
+
+.card {
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 .card-text {
@@ -249,4 +168,27 @@ nav ul li a:last-child {
 
 @media screen and (max-width: 600px) {
   .headshot {display: none;}
+}
+
+.typewriter h3 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .08em solid #1E90FF; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(25, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #1E90FF; }
 }
