@@ -175,6 +175,7 @@ h3 a {
 @media screen and (max-width: 992px) {
   section {padding: 75px 3rem;}
   .gray-right-border {border-right: 0; border-bottom: 1px solid #ccc; margin-bottom: 15px;}
+  .card-text {margin-left: 0;}
 }
 
 .typewriter h3 {
