@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #FAFAFA;
+}
+
+#content {
+  margin-top: 20px;
+  z-index:1;
+}
+
+p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  margin: 30px;
+}
+
+section {
+  padding: 75px 15rem;
+  font-family: Avenir, sans-serif;
+  background-color: white;
+}
+
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #eee;
+  z-index:2;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.navbar-brand {
+  padding-left: 1rem;
+  font-size: 1.75rem;
+}
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  right: 1rem;
+  font-size: 1.25rem;
+}
+
+.parallax {
+  padding: 300px 35px;
+  background: transparent;
+}
+
+.intro {
+  color: black;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 65px;
+  font-weight: 550;
+  letter-spacing: 2px;
+  text-shadow: 0 0 1px transparent;
+  z-index: 1;
+  position: relative;
+}
+
+h2 {
+  margin: 20px;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h3 a {
+  text-decoration: none!important;
+}
+
+.info {
+  z-index: 1;
+  position: relative;
+}
+
+.education {
+  margin: 0px;
+  font-size: 16px;
+}
+
+.activities {
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.gray-right-border {
+  border-right: 1px solid #ccc;
+}
+
+/* Underline Reveal */
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-reveal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1E90FF;
+  height: 3px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 3vw;
+  color: #1E90FF!important;
+  text-decoration: none!important;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.fa-spin-hover:hover {
+  -webkit-animation: fa-spin .45s 1 linear;
+  -moz-animation: fa-spin .45s 1 linear;
+  -o-animation: fa-spin .45s 1 linear;
+  animation: fa-spin .45s 1 linear;
+}
+
+.card {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+@keyframes slideIn {
+  from {
+
+  } to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  section {padding: 75px 3rem;}
+  .gray-right-border {border-right: 0; border-bottom: 1px solid #ccc; margin-bottom: 15px;}
+  .card-text {margin-left: 0!important;}
+}
+
+.typewriter h3 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .08em solid #1E90FF; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(25, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #1E90FF; }
+}
